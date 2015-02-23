@@ -45,17 +45,12 @@ I have used the names() function to apply a heading to each of the measurements.
 ##5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 There has been various discussions in the course forum on whether a tidy dataset should keep each measument in their own column and consider the set of measurements one observation or whether we should have considered each measument an observation of their own. I personally don't think there is a right or wrong way as I believe it depends very much on the type of analysis that it will need to be done after the tidy up, which is not clear from the requirements.
 As such, I have decided to interpret each measurement as a single observation and "melt" the data so to end up with 4 columns:
+
 1. subject
 2. activity_type
 3. variable
 4. mean
 
-subject         activity_type           variable                mean
-
-4               WALKING_DOWNSTAIRS        fBodyAccJerk-std()-Y -1.772021e-01
-4               WALKING_DOWNSTAIRS        fBodyAccJerk-std()-Z -6.688673e-01
-4               WALKING_DOWNSTAIRS          fBodyGyro-mean()-X -2.402989e-01
-4               WALKING_DOWNSTAIRS          fBodyGyro-mean()-Y -7.175458e-01
 
 To accomplish this I have used the melt() function of the dpyr package and the ddply to summarise the measurments and calculate the mean.
 

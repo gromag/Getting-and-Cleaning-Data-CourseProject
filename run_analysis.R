@@ -90,7 +90,7 @@ runAnalysis <- function(){
         # *****************************************************************************
         message("Reading required features")
         features <- read.table(featuresFile) 
-        # Using grep to filter out any feature whose description matches
+        # Using grep to filter out any feature whose description does not match
         # std() or mean(), these are the only features we are interested in.
         # I can safely overwrite the features variable, the full set is no needed for 
         # this assignment.        
